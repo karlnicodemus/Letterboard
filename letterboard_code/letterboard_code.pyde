@@ -15,7 +15,7 @@ def draw():
     image(board,0,0,500,300)
     dataTable = loadTable("sampledata.csv", "header")
     noStroke()
-    for i in range(0,4):
+    for i in range(0,dataTable.getRowCount()):
         row = dataTable.getRow(i)
-        fill(color(255,0,0))
+        fill(color(255,0,0,25))
         ellipse(row.getInt("x"),row.getInt("y"),10,10)
